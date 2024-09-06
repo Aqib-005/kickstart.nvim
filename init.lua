@@ -952,5 +952,18 @@ require('lazy').setup({
   },
 })
 
+-- Initialize packer.nvim
+vim.cmd [[packadd packer.nvim]]
+
+return require('packer').startup(function(use)
+  -- Packer can manage itself
+  use 'wbthomason/packer.nvim'
+
+  -- VimBeGood plugin
+  use 'ThePrimeagen/vim-be-good'
+
+  -- Add any other plugins you want here
+end)
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
